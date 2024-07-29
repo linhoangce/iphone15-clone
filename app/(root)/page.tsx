@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Highlights from "@/components/Highlights";
+import Models3D from "@/components/Models3D";
 import React from "react";
 
 
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <Hero />
       <Highlights />
+      <Models3D />
     </main>
   );
 };
