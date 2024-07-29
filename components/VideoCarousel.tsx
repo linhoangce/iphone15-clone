@@ -18,7 +18,7 @@ const VideoCarousel = () => {
     startPlay: false,
     videoId: 0,
     isLastVideo: false,
-    isPlaying: false,
+    isPlaying: false ,
   });
 
   const [loadedData, setLoadedData] = useState([]);
@@ -49,7 +49,7 @@ const VideoCarousel = () => {
 
   useEffect(() => {
     if (loadedData.length > 3) {
-      if (isPlaying) {
+      if (!isPlaying) {
         videoRef.current[videoId].pause();
       } else {
         startPlay && videoRef.current[videoId].play();
