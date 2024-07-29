@@ -10,7 +10,11 @@ const Header = () => {
 
         <div className="flex flex-1 justify-center max-sm:hidden">
           {navLists.map((item) => (
-            <Link key={item} href="" className="px-5 text-sm cursor-pointer text-gray-400 hover:text-white transition-all">
+            <Link
+              key={item}
+              href=""
+              className="px-5 text-sm cursor-pointer text-gray-400 hover:text-white transition-all"
+            >
               {item}
             </Link>
           ))}

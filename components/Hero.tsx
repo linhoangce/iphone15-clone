@@ -6,8 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [videoSrc, setVideoSrc] = useState("/assets/videos/hero.mp4",
-  );
+  const [videoSrc, setVideoSrc] = useState("/assets/videos/hero.mp4");
 
   const handleVideoSrcSet = () => {
     if (window.innerWidth < 760) {
