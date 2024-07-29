@@ -52,7 +52,7 @@ const Models3D = () => {
               groupRef={small}
               gsapType="view1"
               controlRef={cameraControlSmall}
-              setRotationSize={setSmallRotation}
+              setRotationState={setSmallRotation}
               item={model}
               size={size}
             />
@@ -78,7 +78,7 @@ const Models3D = () => {
               // eventSource={document.getElementById("root")}
             >
               <View.Port />
-              <Preload all />
+              {/* <Preload all /> */}
             </Canvas>
           </div>
 
