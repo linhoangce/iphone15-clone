@@ -32,7 +32,9 @@ const HowItWorks = () => {
         start: "-10% bottom",
       },
       onComplete: () => {
-        videoRef.current.play();
+        if (videoRef.current) { 
+          videoRef.current.play();
+        }
       },
     });
     gsap.from("#chip", {
