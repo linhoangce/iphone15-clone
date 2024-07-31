@@ -20,7 +20,7 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
       <Lights />
 
       <OrbitControls
-        makeDefault
+        // makeDefault
         autoRotate
         autoRotateSpeed={2}
         ref={controlRef}
