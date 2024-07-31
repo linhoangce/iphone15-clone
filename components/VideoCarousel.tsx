@@ -18,7 +18,7 @@ const VideoCarousel = () => {
     startPlay: false,
     videoId: 0,
     isLastVideo: false,
-    isPlaying: false ,
+    isPlaying: false,
   });
 
   const [loadedData, setLoadedData] = useState([]);
@@ -200,7 +200,7 @@ const VideoCarousel = () => {
             </span>
           ))}
         </div>
-        <Button className="control-btn">
+        <Button className="control-btn ">
           <Image
             src={
               isLastVideo

@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       <div id="cta" className="flex flex-col items-center opacity-0 translate-y-20">
-        <Link href="#highlight" className="btn">
+        <Link href="#highlight" className="btn cursor-pointer">
           Buy
         </Link>
         <p className="font-name">From $ 199/month or $999</p>
