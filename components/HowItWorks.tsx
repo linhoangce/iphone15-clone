@@ -32,8 +32,10 @@ const HowItWorks = () => {
         start: "-10% bottom",
       },
       onComplete: () => {
-        if (videoRef.current) { 
-          videoRef.current.play();
+        if (videoRef.current) {
+          videoRef.current.play().catch(error => {
+            console.error('Error playing video:', error);
+          });
         }
       },
     });
