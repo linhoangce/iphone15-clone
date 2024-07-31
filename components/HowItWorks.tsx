@@ -47,7 +47,13 @@ const HowItWorks = () => {
       ease: "power2.inOut",
     });
 
-    animateWithScrollTrigger(".g_fadeIn", {
+    animateWithScrollTrigger(".g_fadeIn", 
+      {
+        scrollTrigger: {
+          trigger: ".g_fadeIn",
+          toggleActions: "start start start start",
+        start: "top 20%",
+        },
       opacity: 1,
       y: 0,
       duration: 2,
