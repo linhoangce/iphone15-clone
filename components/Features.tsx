@@ -17,7 +17,7 @@ const Features = () => {
 
   const image1Src = "/assets/images/explore1.jpg";
   const image2Src = "/assets/images/explore2.jpg";
-  
+
   const { imgSize: imgSize1, imgRef: imgRef1 } = useImageSize(image1Src);
   const { imgSize: imgSize2, imgRef: imgRef2 } = useImageSize(image2Src);
 
@@ -122,7 +122,7 @@ const Features = () => {
                   <p className="feature-text g_text">
                     Titanium has one of the best strength-to-weight ratios of any metal, making
                     these out <span className="text-white">lightest Pro models ever,</span>
-                    You'll notice the difference the moment you pick one up.
+                    You&apos;ll notice the difference the moment you pick one up.
                   </p>
                 </div>
               </div>

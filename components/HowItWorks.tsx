@@ -13,18 +13,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HowItWorks = () => {
   const [imgSize, setImgSize] = useState({ width: 0, height: 0 });
-  
+
   const videoRef = useRef();
 
   useEffect(() => {
     const setImageSize = async () => {
-       const img = await getImageRef('/assets/images/frame.png');
-       setImgSize({ width: img?.width || 0, height: img?.height || 
-       0 });
+      const img = await getImageRef("/assets/images/frame.png");
+      setImgSize({ width: img?.width || 0, height: img?.height || 0 });
     };
     setImageSize();
- }, []);
- 
+  }, []);
+
   useGSAP(() => {
     gsap.to(".hiw-video", {
       scrollTrigger: {
@@ -34,7 +33,7 @@ const HowItWorks = () => {
       },
       onComplete: () => {
         videoRef.current.play();
-      }
+      },
     });
     gsap.from("#chip", {
       scrollTrigger: {
@@ -47,13 +46,12 @@ const HowItWorks = () => {
       ease: "power2.inOut",
     });
 
-    animateWithScrollTrigger(".g_fadeIn", 
-      {
-        scrollTrigger: {
-          trigger: ".g_fadeIn",
-          toggleActions: "start start start start",
+    animateWithScrollTrigger(".g_fadeIn", {
+      scrollTrigger: {
+        trigger: ".g_fadeIn",
+        toggleActions: "start start start start",
         start: "top 20%",
-        },
+      },
       opacity: 1,
       y: 0,
       duration: 2,
@@ -85,7 +83,7 @@ const HowItWorks = () => {
               <Image
                 width={imgSize.width}
                 height={imgSize.height}
-                src='/assets/images/frame.png'
+                src="/assets/images/frame.png"
                 alt="frame"
                 className="bg-transparent relative z-10"
               />
