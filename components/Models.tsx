@@ -1,9 +1,9 @@
 "use client";
-
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ModelView from "./ModelView";
 import { useEffect, useRef, useState } from "react";
+// import { yellowImg } from "../utils";
 
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
@@ -18,6 +18,12 @@ const Model = () => {
     color: ["#8F8A81", "#FFE7B9", "#6F6C64"],
     img: "/assets/images/yellow.jpg",
   });
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // camera control for the model view
   const cameraControlSmall = useRef();
@@ -60,7 +66,7 @@ const Model = () => {
           Take a closer look.
         </h1>
 
-        <div className="flex flex-col items-center mt-5">
+        <div className="flex flex-col items-center mt-5 3d-container">
           <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
             <ModelView
               index={1}
@@ -82,21 +88,24 @@ const Model = () => {
               size={size}
             />
 
-            <div className="relative w-full h-full">
-              <Canvas
-                className="w-full h-full"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                }}
-                eventSource={document.getElementById("root")}
-              >
-                <View.Port />
-              </Canvas>
-            </div>
+            {isClient && (
+              <div className="relative w-full h-full">
+                <Canvas
+                  className="w-full h-full"
+                  style={{
+                    position: "fixed",
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    overflow: "hidden",
+                  }}
+                  eventSource={document.getElementById("root")}
+                >
+                  <View.Port />
+                </Canvas>
+              </div>
+            )}
           </div>
 
           <div className="mx-auto w-full">
