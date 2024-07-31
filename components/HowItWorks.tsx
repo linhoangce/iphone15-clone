@@ -73,7 +73,7 @@ const HowItWorks = () => {
           </h2>
 
           <p className="hiw-subtitle">
-            It's here. The biggest redesign in the history of Apple CPU.
+            It&apox;s here. The biggest redesign in the history of Apple CPU.
           </p>
         </div>
 
