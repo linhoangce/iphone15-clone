@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 const HowItWorks = () => {
   const [imgSize, setImgSize] = useState({ width: 0, height: 0 });
 
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement>();
 
   useEffect(() => {
     const setImageSize = async () => {
