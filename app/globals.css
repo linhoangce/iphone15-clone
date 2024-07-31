@@ -63,7 +63,7 @@ canvas {
   }
 
   .feature-text {
-    @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px];
+    @apply text-gray-600 max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px];
   }
 
   .feature-text-container {
@@ -95,11 +95,15 @@ canvas {
   }
 
   .hiw-subtitle {
-    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center;
+    @apply text-gray-500 font-semibold text-xl md:text-2xl py-10 text-center;
   }
 
   .hiw-video {
     @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden;
+  }
+
+  .hiw-frame {
+    @apply h-[400px];
   }
 
   .hiw-text-container {
@@ -107,7 +111,7 @@ canvas {
   }
 
   .hiw-text {
-    @apply text-gray text-xl font-normal md:font-semibold;
+    @apply text-gray-500 text-xl font-normal md:font-semibold;
   }
 
   .hiw-bigtext {
