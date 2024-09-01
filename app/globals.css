@@ -43,11 +43,11 @@ canvas {
   }
 
   .color-container {
-    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur;
+    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-700 backdrop-blur;
   }
 
   .size-btn-container {
-    @apply flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1;
+    @apply flex items-center justify-center p-1 rounded-full bg-gray-700 backdrop-blur ml-3 gap-1 h-14;
   }
 
   .size-btn {
@@ -83,7 +83,7 @@ canvas {
   }
 
   .control-btn {
-    @apply ml-4 px-5 py-7 rounded-full md:rounded-full bg-gray-700 backdrop-blur flex-center;
+    @apply ml-4 w-14 h-14 rounded-full md:rounded-full bg-gray-700 backdrop-blur flex-center;
   }
 
   .hero-title {

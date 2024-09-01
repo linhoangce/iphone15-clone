@@ -14,10 +14,12 @@ import { animateWithGsapTimeline } from "@/lib/animation";
 const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
+    id: 1,
     title: "iPhone 15 Pro in Natural Titanium",
-    color: ["#8F8A81", "#FFE7B9", "#6F6C64"],
+    color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
     img: "/assets/images/yellow.jpg",
   });
+  const [isSelected, setIsSelected] = useState(model.id);
 
   const [isClient, setIsClient] = useState(false);
 
@@ -60,7 +62,7 @@ const Model = () => {
   }, []);
 
   return (
-    <section className="common-padding">
+    <section className="common-padding relative">
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading">
           Take a closer look.
@@ -93,7 +95,7 @@ const Model = () => {
                 <Canvas
                   className="w-full h-full"
                   style={{
-                    position: "absolute",
+                    position: "fixed",
                     top: 0,
                     bottom: 0,
                     left: 0,
@@ -108,17 +110,22 @@ const Model = () => {
             )}
           </div>
 
-          <div className="mx-auto w-full">
-            <p className="text-sm font-light text-center mb-5">{model.title}</p>
+          <div className="mx-auto w-full ">
+            <p className="text-[12px] font-bold text-center mb-5">{model.title}</p>
 
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, i) => (
                   <li
                     key={i}
-                    className="w-6 h-6 rounded-full mx-2 cursor-pointer"
+                    className={`w-6 h-6 rounded-full mx-2 cursor-pointer ${
+                      isSelected === item.id && "ring-2 ring-white"
+                    }`}
                     style={{ backgroundColor: item.color[0] }}
-                    onClick={() => setModel(item)}
+                    onClick={() => {
+                      setModel(item);
+                      setIsSelected(item.id);
+                    }}
                   />
                 ))}
               </ul>
@@ -127,7 +134,7 @@ const Model = () => {
                 {sizes.map(({ label, value }) => (
                   <span
                     key={label}
-                    className="size-btn"
+                    className="size-btn font-bold "
                     style={{
                       backgroundColor: size === value ? "white" : "transparent",
                       color: size === value ? "black" : "white",

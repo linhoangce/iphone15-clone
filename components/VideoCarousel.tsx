@@ -225,7 +225,7 @@ const VideoCarousel = () => {
       </div>
 
       <div className="relative flex-center mt-10">
-        <div className="flex-center py-5 px-7 bg-gray-600 backdrop-blur rounded-full">
+        <div className="flex-center py-5 px-7 bg-gray-700 backdrop-blur rounded-full">
           {videoRef.current.map((_, i) => (
             <span
               key={i}
@@ -249,8 +249,8 @@ const VideoCarousel = () => {
                   : "assets/images/pause.svg"
             }
             alt={isLastVideo ? "replay" : !isPlaying ? "play" : "pause"}
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             onClick={
               isLastVideo
                 ? () => handleProcess("video-reset")
