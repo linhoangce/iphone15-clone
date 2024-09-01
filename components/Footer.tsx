@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="flex">
             {footerLinks.map((link, index) => (
               <p key={link} className="font-semibold text-gray-500 hover:text-white cursor-pointer">
-                {link} {index !== footerLinks.length - 1 && <span className="mx-2"> | </span>}
+                {link} {index !== footerLinks.length - 1 && <span className="mx-4"> | </span>}
               </p>
             ))}
           </div>

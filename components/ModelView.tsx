@@ -22,10 +22,9 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
       <OrbitControls
         makeDefault
         autoRotate
+        enableZoom={false}
         autoRotateSpeed={2}
         ref={controlRef}
-        enableZoom={true}
-        enablePan={true}
         rotateSpeed={0.4}
         target={new THREE.Vector3(0, 0, 0)}
         onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
