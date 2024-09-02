@@ -225,12 +225,12 @@ const VideoCarousel = () => {
       </div>
 
       <div className="relative flex-center mt-10">
-        <div className="flex-center py-5 px-7 bg-gray-700 backdrop-blur rounded-full">
+        <div className="sticky-bottom flex-center py-5 px-7 bg-[rgba(66,66,69,0.7)] backdrop-blur-md rounded-full">
           {videoRef.current.map((_, i) => (
             <span
               key={i}
               ref={(el) => (videoDivRef.current[i] = el)}
-              className="mx-2 w-3 h-3 bg-gray-400 rounded-full relative cursor-pointer"
+              className="mx-2 w-3 h-3 bg-[rgba(66,66,69,0.7)] rounded-full relative cursor-pointer"
             >
               <span
                 className="absolute h-full w-full rounded-full"

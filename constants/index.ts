@@ -30,25 +30,29 @@ export const hightlightsSlides = [
 export const models = [
   {
     id: 1,
-    title: "iPhone 15 Pro in Natural Titanium",
+    title: "iPhone 15 in Natural Titanium",
+    titlePro: "iPhone 15 Pro in Natural Titanium",
     color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
     img: "/assets/images/yellow.jpg",
   },
   {
     id: 2,
-    title: "iPhone 15 Pro in Blue Titanium",
+    title: "iPhone 15 in Blue Titanium",
+    titlePro: "iPhone 15 Pro in Blue Titanium",
     color: ["#53596E", "#6395ff", "#21242e"],
     img: "/assets/images/blue.jpg",
   },
   {
     id: 3,
-    title: "iPhone 15 Pro in White Titanium",
+    title: "iPhone 15 in White Titanium",
+    titlePro: "iPhone 15 Pro in White Titanium",
     color: ["#C9C8C2", "#ffffff", "#C9C8C2"],
     img: "/assets/images/white.jpg",
   },
   {
     id: 4,
-    title: "iPhone 15 Pro in Black Titanium",
+    title: "iPhone 15 in Black Titanium",
+    titlePro: "iPhone 15 Pro in Black Titanium",
     color: ["#454749", "#3b3b3b", "#181819"],
     img: "/assets/images/black.jpg",
   },

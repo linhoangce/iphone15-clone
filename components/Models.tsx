@@ -62,7 +62,7 @@ const Model = () => {
   }, []);
 
   return (
-    <section className="common-padding relative">
+    <section className="common-padding">
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading">
           Take a closer look.
@@ -100,6 +100,8 @@ const Model = () => {
                     bottom: 0,
                     left: 0,
                     right: 0,
+                    zIndex: -1, 
+                    pointerEvents: "none",
                     overflow: "hidden",
                   }}
                   eventSource={document.getElementById("root")}
@@ -111,7 +113,9 @@ const Model = () => {
           </div>
 
           <div className="mx-auto w-full ">
-            <p className="text-[12px] font-bold text-center mb-5">{model.title}</p>
+            <p className="text-[12px] font-bold text-center mb-5">
+              {size === "small" ? model.title : model.titlePro}
+            </p>
 
             <div className="flex-center">
               <ul className="color-container">
@@ -134,10 +138,12 @@ const Model = () => {
                 {sizes.map(({ label, value }) => (
                   <span
                     key={label}
-                    className="size-btn font-bold "
+                    className="size-btn font-bold gap-0 "
                     style={{
                       backgroundColor: size === value ? "white" : "transparent",
                       color: size === value ? "black" : "white",
+                      border: size === value ? "5px solid gray" : "none",
+                      borderColor: size === value ? "blue" : "none",
                     }}
                     onClick={() => setSize(value)}
                   >

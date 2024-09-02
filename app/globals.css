@@ -43,15 +43,15 @@ canvas {
   }
 
   .color-container {
-    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-700 backdrop-blur;
+    @apply flex items-center justify-center px-4 py-4 rounded-full bg-[rgba(66,66,69,0.7)] backdrop-blur;
   }
 
   .size-btn-container {
-    @apply flex items-center justify-center p-1 rounded-full bg-gray-700 backdrop-blur ml-3 gap-1 h-14;
+    @apply flex items-center justify-center rounded-full bg-[rgba(66,66,69,0.7)] backdrop-blur ml-3 h-14;
   }
 
   .size-btn {
-    @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all;
+    @apply w-14 h-14 gap-0 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all;
   }
 
   .common-padding {
@@ -83,7 +83,7 @@ canvas {
   }
 
   .control-btn {
-    @apply ml-4 w-14 h-14 rounded-full md:rounded-full bg-gray-700 backdrop-blur flex-center;
+    @apply ml-4 w-14 h-14 rounded-full md:rounded-full bg-[rgba(66,66,69,0.7)] backdrop-blur flex-center;
   }
 
   .hero-title {
