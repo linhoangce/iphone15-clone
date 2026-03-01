@@ -19,7 +19,7 @@
     </div>
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+##  <a name="table">Table of Contents</a>
 
 1.  [Introduction](#introduction)
 2.  [Tech Stack](#tech-stack)
@@ -55,7 +55,7 @@ This is a clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS.
 
 and many more, including code architecture and reusability 
 
-## <a name="quick-start">🤸 Quick Start</a>
+## <a name="quick-start"> Quick Start</a>
 
 Follow these steps to set up the project locally on your machine.
 
